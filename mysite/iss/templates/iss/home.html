@@ -1,0 +1,36 @@
+{% extends 'iss/base.html' %}
+{% load static %}
+{% block content %}
+	<div class='main-image'>
+		<img src="{% static 'images/iss.jpg'%}">
+	</div>
+	<div class='row' style="padding-top: 50px; text-align: center;">
+		<div class='col-sm' style="background-color: red;">
+			<div class="card" style="width: 18rem;">
+			  <img class="card-img-top" src="{% static 'images/live.jpg'%}" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Live Position</h5>
+			    <a href="{% url 'iss:live' %}" class="btn btn-primary">Go somewhere</a>
+			  </div>
+			</div>
+		</div>
+		<div class='col-sm' style="background-color: green;">
+			<div class="card" style="position: center; width: 18rem;">
+			  <img class="card-img-top" src="{% static 'images/location.jpg'%}" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">At Your Location</h5>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+			  </div>
+			</div>
+		</div>
+		<div class='col-sm' style="background-color: blue;">
+			<div class="card" style="width: 18rem;">
+			  <img class="card-img-top" src="{% static 'images/info (3).jpg'%}" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title">Daily Updates</h5>
+			    <a href="#" class="btn btn-primary">Go somewhere</a>
+			  </div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,7 +1,10 @@
 from django.urls import path
 from . import views
 
+app_name = 'iss'
+
 urlpatterns = [
-	path('', views.index, name='index')
+	path('', views.home, name='home'),
+	path('live/', views.live, name='live')
 
 ]
