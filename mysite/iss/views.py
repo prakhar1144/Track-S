@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 import time
+from .services import apod
 
 # Create your views here.
 def home(request):
@@ -16,3 +17,8 @@ def isspassdata(request, data):
 	longi = data['Longi']
 	print(lati,longi)
 	return render(request, 'iss/passtime.html')
+
+def more(request):
+	variable = apod()
+	context = {'value':variable}
+	return render(request, 'iss/more.html', context)
