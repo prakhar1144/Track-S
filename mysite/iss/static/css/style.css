@@ -1,14 +1,17 @@
 html, body {
     overflow-x: hidden;
+    background: black;    
 }
 
 .page-header {
+    font-family: 'Special Elite', cursive;
+    text-align: center;
     width: 100%;
-    background-color: #07c5eb;
+    background-color: black;
     margin-top: 0;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    padding-left: 3%;
+    padding-top: 40px;
+    /*padding-bottom: 25px;*/
+    /*padding-left: 3%;*/
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -21,7 +24,7 @@ html, body {
 
     padding-top: 50px;
     text-align: center;
-    filter: drop-shadow(0 0 30px grey)
+    /*filter: drop-shadow(0 0 10px #2e2d2d)*/
 
 }
 
@@ -42,9 +45,49 @@ html, body {
     height: 380px;
 }
 
+/*#live_lon_lat {
+
+  font-family: 'Special Elite', cursive;
+  margin-top: 50px; 
+  text-align: center;
+  background-color: green;
+}
+*/
 @media only screen and (max-width : 485px){
     .main-image img{width:100%;}
     .main-image { padding-top:30px;}
-    #mapid { height: 200px; margin-top: 10px; }
+    #mapid { height: 200px; margin-top: 50px; }
 
 }
+
+
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255,255,255,0.0);
+  border-radius: 5px;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: scale(1, 1);
+    background: rgba(255,255,255,0.0);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: scale(0.8, 0.8);
+    background: rgba(255,255,255,1);
+    animation-timing-function: ease-out;
+  }
+  80% {
+    background: rgba(255,255,255,0.00);
+    transform: scale(1, 1);
+  }
+  100% {
+    background: rgba(255,255,255,0.0);
+    transform: scale(1, 1);
+  }
+}
+    

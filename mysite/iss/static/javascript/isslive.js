@@ -29,6 +29,10 @@ var map = L.map('mapid').setView([0, 0], 2 );
         issmark.setLatLng([lat, lon]);
         isscircle.setLatLng([lat, lon]);
         map.panTo([lat, lon], animate=true);
+        $('#show').text(lat);
+        $('#shoow').text(lon);
+
+
     });
     setTimeout(moveISS(), 5000); 
 }
