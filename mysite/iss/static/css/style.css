@@ -56,7 +56,7 @@ html, body {
 @media only screen and (max-width : 485px){
     .main-image img{width:100%;}
     .main-image { padding-top:30px;}
-    #mapid { height: 200px; margin-top: 50px; }
+    #mapid { height: 200px; margin-top: 40px; }
 
 }
 

@@ -6,7 +6,11 @@
 		
 		</div>	
 	</div>
-	<div id='isspass'></div>
+	<div id='isspass' style="text-align: center; font-family: 'Special Elite', cursive; color: white; margin-top: 30px;" ></div>
+<!-- 	<script src="{% static 'javascript/jquery-3.5.1.js' %}"></script>
+	<script src="{% static 'javascript/isspass.js'%}"></script> -->    <!-- was doing this mistake to include it here -->
+{% endblock %}
+{% block javascript %}
 	<script src="{% static 'javascript/jquery-3.5.1.js' %}"></script>
 	<script src="{% static 'javascript/isspass.js'%}"></script>
 {% endblock %}

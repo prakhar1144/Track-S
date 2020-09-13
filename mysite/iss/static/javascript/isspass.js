@@ -22,17 +22,22 @@ function onMapclick(e) {
 
 map.on('click',onMapclick);
 
-function put(F) {
+function put(E) {
 
 
-	var dataa = F;	
-	alert(dataa['lat'])
-	alert(dataa['lon'])
-    $.getJSON('http://api.open-notify.org/iss-pass.json?lat='+ dataa['lat'] +'&lon=' + dataa['lon'] +'&alt=20&n=5&callback=?', dataa, function(data) {
+	var dataa = E;	
+/*	alert(dataa['lat'])
+	alert(dataa['lon'])*/
+    $('#isspass').html('')
+    $.getJSON('http://api.open-notify.org/iss-pass.json?lat='+ dataa['lat'] +'&lon=' + dataa['lon'] +'&n=5&callback=?', dataa, function(data) {
     data['response'].forEach(function (d) {
+        console.log(d)
         var date = new Date(d['risetime']*1000);
+        var duration =  (d['duration']/60).toFixed(2);
 
-        $('#isspass').append('<li>' + date.toString() + '</li>');
+        $('#isspass').append('<h5>' + date.toString() + '</h5>');
+        $('#isspass').append('<h6>' + 'Duration : ' + duration.toString() + ' Min'+'</h6>');
+
     });
    
 });
@@ -54,5 +59,5 @@ function put(F) {
     setTimeout(putt(), 5000)
 
 }*/
-var D = {'lat':45.0,'lon':45.0};
-/*put(D);*/
+/*var D = {'lat':45.0,'lon':45.0};
+put(D);*/
