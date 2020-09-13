@@ -43,6 +43,7 @@ function put(E) {
 });
     
 }
+alert('Select Your Location');
 /*function putt() {
 
     $.getJSON('http://api.open-notify.org/iss-pass.json?lat=45.0&lon=121.0&alt=20&n=5&callback=?', function(data) {
