@@ -1,16 +1,16 @@
 {% extends 'iss/base.html' %}
 {% load static %}
 {% block content %}
-	<div class='main-image'>
-		<img src="{% static 'images/iss.jpg'%}">
-	</div>
+	<!-- <div class='main-image'>
+		<img src="{% static 'images/iss-bg.jpg'%}">
+	</div> -->
 	<div class='row' style="padding-top: 50px; text-align: center;">
 		<div class='col-sm'>
 			<div class="card" style="width: 18rem;">
 			  <img class="card-img-top" src="{% static 'images/live.jpg'%}" alt="Card image cap">
 			  <div class="card-body">
-			    <h5 class="card-title">Live Position</h5>
-			    <a href="{% url 'iss:live' %}" class="btn btn-primary">Go somewhere</a>
+			    <!-- <h5 class="card-title">Live Position</h5> -->
+			    <a href="{% url 'iss:live' %}" class="btn btn-primary">Live Position</a>
 			  </div>
 			</div>
 		</div>
@@ -18,8 +18,8 @@
 			<div class="card" style="position: center; width: 18rem;">
 			  <img class="card-img-top" src="{% static 'images/location.jpg'%}" alt="Card image cap">
 			  <div class="card-body">
-			    <h5 class="card-title">At Your Location</h5>
-			    <a href="{% url 'iss:passtime' %}" class="btn btn-primary">Go somewhere</a>
+			    <!-- <h5 class="card-title">At Your Location</h5> -->
+			    <a href="{% url 'iss:passtime' %}" class="btn btn-primary">At Your Location</a>
 			  </div>
 			</div>
 		</div>
@@ -27,8 +27,8 @@
 			<div class="card" style="width: 18rem;">
 			  <img class="card-img-top" src="{% static 'images/info (3).jpg'%}" alt="Card image cap">
 			  <div class="card-body">
-			    <h5 class="card-title">Weekly Blogs</h5>
-			    <a href="{% url 'iss:more' %}" class="btn btn-primary">Go somewhere</a>
+			    <!-- <h5 class="card-title">Weekly Blogs</h5> -->
+			    <a href="{% url 'iss:more' %}" class="btn btn-primary">Weekly Blogs</a>
 			  </div>
 			</div>
 		</div>

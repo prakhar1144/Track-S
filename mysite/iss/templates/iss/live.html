@@ -1,21 +1,19 @@
 {% extends 'iss/base.html' %}
 {% load static %}
+
 {% block content %}
 	<div>
-		<div id='mapid'>
-		
-		</div>	
-
+		<div id='mapid'></div>	
 	</div>
 	<div style="margin-top: 50px; text-align: center; font-family: 'Special Elite', cursive; color: white;">
 		<h4>Latitude<h5 id='show'></h5></h4>
 		<br>
-		<h4>Longitude<h5 id='shoow'></h5></>
+		<h4>Longitude<h5 id='shoow'></h5></h4>
 	</div>
 
 	<!-- <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script> -->
-
 {% endblock %}
+
 {% block javascript %}
 	<script src="{% static 'javascript/jquery-3.5.1.js' %}"></script>
 	<script src="{% static 'javascript/isslive.js'%}"></script>

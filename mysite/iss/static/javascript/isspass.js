@@ -8,27 +8,17 @@ var map = L.map('mapid').setView([0, 0], 2 );
     accessToken: 'pk.eyJ1IjoicHJha2hhcjE0IiwiYSI6ImNrZXdrdnNzODAyNHQyeG4xeDRoZnZnOWwifQ.BjyU2T1V84OAiMThjjj8DQ'
 }).addTo(map);
 
-
-
 function onMapclick(e) {
-
-
 	var E = {'lat':e.latlng.lat,'lon':e.latlng.lng};
 	put(E);
-
-
 }
-
 
 map.on('click',onMapclick);
 
 function put(E) {
-
-
-	var dataa = E;	
-/*	alert(dataa['lat'])
-	alert(dataa['lon'])*/
+	var dataa = E;
     $('#isspass').html('')
+
     $.getJSON('http://api.open-notify.org/iss-pass.json?lat='+ dataa['lat'] +'&lon=' + dataa['lon'] +'&n=5&callback=?', dataa, function(data) {
     data['response'].forEach(function (d) {
         console.log(d)
@@ -38,8 +28,7 @@ function put(E) {
         $('#isspass').append('<h5>' + date.toString() + '</h5>');
         $('#isspass').append('<h6>' + 'Duration : ' + duration.toString() + ' Min'+'</h6>');
 
-    });
-   
+    }); 
 });
     
 }

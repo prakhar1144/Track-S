@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 import time
 from .services import apod
 
@@ -12,11 +12,10 @@ def live(request):
 def passtime(request):
 	return render(request, 'iss/passtime.html')
 
-def isspassdata(request, data):
-	lati = data['Lati']
-	longi = data['Longi']
-	print(lati,longi)
-	return render(request, 'iss/passtime.html')
+# def isspassdata(request, data):
+# 	lati = data['Lati']
+# 	longi = data['Longi']
+# 	return render(request, 'iss/passtime.html')
 
 def more(request):
 	variable = apod()

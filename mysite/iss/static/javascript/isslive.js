@@ -1,4 +1,5 @@
 var map = L.map('mapid').setView([0, 0], 2 );
+
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 4,
@@ -6,12 +7,9 @@ var map = L.map('mapid').setView([0, 0], 2 );
     tileSize: 512,
     zoomOffset: -1,
     accessToken: 'pk.eyJ1IjoicHJha2hhcjE0IiwiYSI6ImNrZXdrdnNzODAyNHQyeG4xeDRoZnZnOWwifQ.BjyU2T1V84OAiMThjjj8DQ'
-}).addTo(map);
-	var issIcon = L.icon({
-    iconUrl: "/images/marker.jpg",	    
-    iconSize:     [30, 30],
+    }).addTo(map);
 
-			});
+	var issIcon = L.icon({iconUrl: "{% static 'images/marker.jpg'%}", iconSize:[30, 30]});
 	var issmark = L.marker([0, 0], {icon: issIcon}).addTo(map);
 
 	var isscircle = L.circleMarker([0, 0], {
@@ -31,10 +29,8 @@ var map = L.map('mapid').setView([0, 0], 2 );
         map.panTo([lat, lon], animate=true);
         $('#show').text(lat);
         $('#shoow').text(lon);
-
-
     });
-    setTimeout(moveISS(), 5000); 
 }
 
 moveISS();
+setInterval(moveISS, 5000); 
